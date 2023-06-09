@@ -56,7 +56,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Load your data
-data = pd.read_csv('./Diabestes_Hospital_Encounters.csv',sep='delimiter')
+data = pd.read_csv('./Diabestes_Hospital_Encounters.csv')
 # Display the top 5 rows using st.dataframe()
 st.dataframe(data.head(5))
 tab1, tab2, tab3,tab4,tab5 = st.tabs(["Story", "Metrics & Demographics", "Descriptive Analysis","Diagnostic analysis","Overview & definitions"])
