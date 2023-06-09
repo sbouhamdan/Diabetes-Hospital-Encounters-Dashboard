@@ -80,7 +80,7 @@ with tab1:
 	with col2:
 		
 		st.markdown("<div class='right-column'>", unsafe_allow_html=True)
-		image_path = "https://github.com/sbouhamdan/Diabetes-Hospital-Encounters-Dashboard/blob/main/readmission.jpg"  # Replace with the actual path to your image
+		image_path = "./readmission.jpg"  # Replace with the actual path to your image
 		st.image(image_path, use_column_width=True)
 		st.markdown("</div>", unsafe_allow_html=True)
 
