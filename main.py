@@ -411,7 +411,7 @@ with tab3:
 
 			
 		with col2:
-			st.image('https://github.com/sbouhamdan/Diabetes-Hospital-Encounters-Dashboard/blob/main/MedicationCartoon.jpg')
+			st.image('./MedicationCartoon.jpg')
 	# Add a line between sections
 	st.markdown("---")
 	st.header('*Health Condition Diagnosis*')
@@ -470,7 +470,7 @@ with tab4:
 			with col1:
 				st.write('')
 			with col2: 
-				st.image('https://github.com/sbouhamdan/Diabetes-Hospital-Encounters-Dashboard/blob/main/hospital.gif',use_column_width='auto')
+				st.image('./hospital.gif',use_column_width='auto')
 			with col3:
 				st.write('')
 			# create a multi select filter
@@ -572,7 +572,7 @@ with tab4:
 			st.write('')
 			st.write('')
 			st.write('')
-			st.image('https://github.com/sbouhamdan/Diabetes-Hospital-Encounters-Dashboard/blob/main/A1C_charts_approved.png')
+			st.image('./A1C_charts_approved.png')
 		
 		with col3: 
 			st.write('')
