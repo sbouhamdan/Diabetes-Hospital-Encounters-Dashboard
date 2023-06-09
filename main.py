@@ -56,7 +56,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Load your data
-data = pd.read_csv('https://github.com/sbouhamdan/Diabetes-Hospital-Encounters-Dashboard/blob/main/Diabestes_Hospital_Encounters.csv',sep='delimiter')
+data = pd.read_csv('https://drive.google.com/file/d/1x0a78OEL8V8_Sb3s7S7-J372RWrL1w-b/view?usp=sharing',sep='delimiter')
 # Display the top 5 rows using st.dataframe()
 st.dataframe(data.head(5))
 tab1, tab2, tab3,tab4,tab5 = st.tabs(["Story", "Metrics & Demographics", "Descriptive Analysis","Diagnostic analysis","Overview & definitions"])
