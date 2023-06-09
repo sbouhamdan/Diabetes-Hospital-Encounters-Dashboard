@@ -55,7 +55,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Load your data
-data = pd.read_csv('D:/AUB Courses/Healthcare analytics/Diabestes_Hospital_Encounters.csv')
+data = pd.read_csv('https://github.com/sbouhamdan/Diabetes-Hospital-Encounters-Dashboard/blob/main/Diabestes_Hospital_Encounters.csv')
 
 tab1, tab2, tab3,tab4,tab5 = st.tabs(["Story", "Metrics & Demographics", "Descriptive Analysis","Diagnostic analysis","Overview & definitions"])
 
@@ -78,7 +78,7 @@ with tab1:
 	with col2:
 		
 		st.markdown("<div class='right-column'>", unsafe_allow_html=True)
-		image_path = "readmission.jpg"  # Replace with the actual path to your image
+		image_path = "https://github.com/sbouhamdan/Diabetes-Hospital-Encounters-Dashboard/blob/main/readmission.jpg"  # Replace with the actual path to your image
 		st.image(image_path, use_column_width=True)
 		st.markdown("</div>", unsafe_allow_html=True)
 
@@ -410,7 +410,7 @@ with tab3:
 
 			
 		with col2:
-			st.image('MedicationCartoon.jpg')
+			st.image('https://github.com/sbouhamdan/Diabetes-Hospital-Encounters-Dashboard/blob/main/MedicationCartoon.jpg')
 	# Add a line between sections
 	st.markdown("---")
 	st.header('*Health Condition Diagnosis*')
@@ -469,7 +469,7 @@ with tab4:
 			with col1:
 				st.write('')
 			with col2: 
-				st.image('hospital.gif',use_column_width='auto')
+				st.image('https://github.com/sbouhamdan/Diabetes-Hospital-Encounters-Dashboard/blob/main/hospital.gif',use_column_width='auto')
 			with col3:
 				st.write('')
 			# create a multi select filter
@@ -571,7 +571,7 @@ with tab4:
 			st.write('')
 			st.write('')
 			st.write('')
-			st.image('A1C_charts_approved.png')
+			st.image('https://github.com/sbouhamdan/Diabetes-Hospital-Encounters-Dashboard/blob/main/A1C_charts_approved.png')
 		
 		with col3: 
 			st.write('')
