@@ -55,7 +55,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 # Load your data
-data = pd.read_csv('https://github.com/sbouhamdan/Diabetes-Hospital-Encounters-Dashboard/blob/main/Diabestes_Hospital_Encounters.csv',error_bad_lines=False)
+data = pd.read_csv('https://github.com/sbouhamdan/Diabetes-Hospital-Encounters-Dashboard/blob/main/Diabestes_Hospital_Encounters.csv')
 
 tab1, tab2, tab3,tab4,tab5 = st.tabs(["Story", "Metrics & Demographics", "Descriptive Analysis","Diagnostic analysis","Overview & definitions"])
 
