@@ -57,7 +57,8 @@ st.markdown(
 )
 # Load your data
 data = pd.read_csv('https://github.com/sbouhamdan/Diabetes-Hospital-Encounters-Dashboard/blob/main/Diabestes_Hospital_Encounters.csv',sep='delimiter')
-
+# Display the top 5 rows using st.dataframe()
+st.dataframe(data.head(5))
 tab1, tab2, tab3,tab4,tab5 = st.tabs(["Story", "Metrics & Demographics", "Descriptive Analysis","Diagnostic analysis","Overview & definitions"])
 
 with tab1:
@@ -123,8 +124,7 @@ with tab2:
 		with col1:
 			st.markdown("<p class='metric-label'>Total Encounters</p>", unsafe_allow_html=True)
 			st.markdown(f"<p class='metric-value'>{len(data)}</p>", unsafe_allow_html=True)
-		
-		# Metric 2: Readmitted = Yes
+			# Metric 2: Readmitted = Yes
 		with col2:
 			readmitted_yes_count = len(data[data['readmitted'] == 'Yes'])
 			total_cases = len(data)
