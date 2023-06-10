@@ -135,7 +135,13 @@ if check_password():
 				.metric-value {
 					font-size: 36px;
 					color: blue;
+					margin-left: 3rem;
 				}
+				.metric {
+				font-size: 36px;
+				color: blue;
+				
+			    }
 				.metric-label {
 					font-size: 15px;
 					color: black;
@@ -153,7 +159,7 @@ if check_password():
 			# Metric 1: Total hospital Encounters
 			with col1:
 				st.markdown("<p class='metric-label'>Total Encounters</p>", unsafe_allow_html=True)
-				st.markdown(f"<p class='metric-value'>{len(data)}</p>", unsafe_allow_html=True)
+				st.markdown(f"<p class='metric'>{len(data)}</p>", unsafe_allow_html=True)
 				# Metric 2: Readmitted = Yes
 			with col2:
 				readmitted_yes_count = len(data[data['readmitted'] == 'Yes'])
@@ -164,25 +170,25 @@ if check_password():
 				readmitted_percentage_formatted = "{:.2f}%".format(readmitted_percentage)
 
 				st.markdown("<p class='metric-label'>Readmitted</p>", unsafe_allow_html=True)
-				st.markdown(f"<p class='metric-value'>{readmitted_percentage_formatted}</p>", unsafe_allow_html=True)
+				st.markdown(f"<p class='metric'>{readmitted_percentage_formatted}</p>", unsafe_allow_html=True)
 			
 			# Metric 3: Average time in hospital
 			with col3:
-				average_time_in_hospital = data['time_in_hospital'].mean()
+				average_time_in_hospital = int(data['time_in_hospital'].mean())
 				st.markdown("<p class='metric-label'>Avg days in hospital</p>", unsafe_allow_html=True)
-				st.markdown(f"<p class='metric-value'>{average_time_in_hospital:.2f}</p>", unsafe_allow_html=True)
+				st.markdown(f"<p class='metric-value'>{average_time_in_hospital}</p>", unsafe_allow_html=True)
 			
 			# Metric 4: Average lab procedures
 			with col4:
-				average_lab_procedures = data['num_lab_procedures'].mean()
+				average_lab_procedures = int(data['num_lab_procedures'].mean())
 				st.markdown("<p class='metric-label'>Avg lab procedures/stay</p>", unsafe_allow_html=True)
-				st.markdown(f"<p class='metric-value'>{average_lab_procedures:.2f}</p>", unsafe_allow_html=True)
+				st.markdown(f"<p class='metric-value'>{average_lab_procedures}</p>", unsafe_allow_html=True)
 			
 			# Metric 5: Average medications
 			with col5:
-				average_medications = data['num_medications'].mean()
+				average_medications = int(data['num_medications'].mean())
 				st.markdown("<p class='metric-label'>Avg medications/stay</p>", unsafe_allow_html=True)
-				st.markdown(f"<p class='metric-value'>{average_medications:.2f}</p>", unsafe_allow_html=True)
+				st.markdown(f"<p class='metric-value'>{average_medications}</p>", unsafe_allow_html=True)
 
 		# Add a line between sections
 		st.markdown("---")
