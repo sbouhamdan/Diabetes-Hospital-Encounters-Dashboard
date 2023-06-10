@@ -783,7 +783,7 @@ if check_password():
 
 			# Create the stacked bar chart using Plotly Express
 			fig = px.bar(grouped_data, x='Change', y='count', color='readmitted', barmode='stack',
-						 facet_col='Admissiontype', title='Medication Change, Admission Type, and Readmission # for patients on diabetes medication)
+						 facet_col='Admissiontype', title='Medication Change, Admission Type, and Readmission # for patients on diabetes medication')
 
 			# Set the axis labels
 			fig.update_layout(xaxis_title='', yaxis_title='Count')
