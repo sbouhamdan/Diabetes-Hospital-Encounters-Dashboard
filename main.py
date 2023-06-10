@@ -209,7 +209,7 @@ if check_password():
 				# Set plot title and labels
 				ax.set_title("Gender\n",fontfamily="Arial", fontsize=18,fontweight='bold')
 				# Modify the size of labels
-				# Modify the size of labels
+				
 				for label in labels:
 					label.set_size(8)
 				# Show the plot
@@ -232,7 +232,7 @@ if check_password():
 				ax.spines['right'].set_visible(False)
 				ax.spines['bottom'].set_visible(False)
 				ax.spines['left'].set_visible(False)
-				# Adjust spacing between title and chart
+				
 				
 				# Show the plot
 				st.pyplot(fig)
@@ -275,12 +275,7 @@ if check_password():
 	with tab3:
 		st.header('*Hospital Encounters*')
 		
-		# Create the stay_container container
-		#stay_container = st.container()
 
-
-		#with stay_container:
-			# Create two columns for line chart and histogram
 		col1, col2 = st.columns(2)
 
 		# Line chart: Average time in hospital by age
@@ -325,10 +320,10 @@ if check_password():
 				plot_bgcolor='white'
 				,width=450, height=420
 				
-					#margin=dict(l=10, r=10, t=50, b=10)
+					
 				)
 
-				# Display the histogram in Streamlit
+			# Display the histogram in Streamlit
 			st.plotly_chart(fig)			
 
 		# Create the insight_container container
@@ -362,7 +357,7 @@ if check_password():
 				#xaxis_title='Count',
 				#yaxis_title='Admission Type',
 				width=450, height=400,
-				#margin=dict(l=100, r=50, t=50, b=50),  # Adjust the margin as per your preference
+				
 			)
 			
 				# Render the plotly figure using st.plotly_chart
@@ -389,7 +384,7 @@ if check_password():
 
 				# Call the function to plot the donut chart
 				plot_donut_chart(data)
-		# Create the insight_container container
+		# Create the drug_container container
 		# Add a line between sections
 		st.markdown("---")
 		st.header('*Medication usage*')
@@ -485,10 +480,10 @@ if check_password():
 	with tab4:
 		intro_container = st.container()
 		with intro_container:
-			# Create two columns for line chart and histogram
+			
 			col1, col2 = st.columns(2)
 
-			# Line chart: Average time in hospital by age
+			
 			with col1: 
 				st.write('')
 				st.write('')
@@ -503,7 +498,7 @@ if check_password():
 					st.image('./hospital.gif',use_column_width='auto')
 				with col3:
 					st.write('')
-				# create a multi select filter
+				
 		
 					
 		
@@ -614,7 +609,7 @@ if check_password():
 				# Apply filters to create the subset
 				filtered_data_subset = filtered_data[(filtered_data['A1CResult'] == '>8') & (filtered_data['Diabetes_Med'] == 'Yes')]
 
-				# Assuming you have a DataFrame called 'data' and the desired columns exist
+				
 				columns = ['insulin', 'metformin', 'glimepiride']
 
 				# Calculate the count of each value for each column in the filtered subset
@@ -771,7 +766,7 @@ if check_password():
 			selected_gender = st.selectbox('Select Gender', ['All'] + data['gender'].unique().tolist(), index=0)
 			selected_diagnosis = st.selectbox('Select primary Diagnosis', ['All'] + data['Diagnosis1'].unique().tolist(), index=0)
 			# Filter the data based on user selections
-			# Filter the data based on user selections
+			
 			if selected_gender != 'All':
 				filtered_data = filtered_data[filtered_data['gender'] == selected_gender]
 			if selected_diagnosis != 'All':
@@ -788,7 +783,7 @@ if check_password():
 
 			# Create the stacked bar chart using Plotly Express
 			fig = px.bar(grouped_data, x='Change', y='count', color='readmitted', barmode='stack',
-						 facet_col='Admissiontype', title='Change, Admission Type, and Readmission Counts for Diabetes_Med = Yes')
+						 facet_col='Admissiontype', title='Medication Change, Admission Type, and Readmission # for patients on diabetes medication)
 
 			# Set the axis labels
 			fig.update_layout(xaxis_title='', yaxis_title='Count')
